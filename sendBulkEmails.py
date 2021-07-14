@@ -181,7 +181,7 @@ for to in get_data(emails, 12):
   msg['To'] = get_data(emails, 12)[count]
   msg['From'] = "Blue Rock Foundation <bluerock@gmail.com>"
   msg['Subject'] = "Order Number " + get_data(onum, 0) + " Information"
-  body = MIMEText(build_email(get_data(onum, 0)[count], get_data(orderdate, 4)[count], get_data(shipname, 5)[count], get_data(shipaddr1, 6)[count], get_data(shipaddr2, 7)[count], get_data(shipaddr3, 8)[count], get_data(shipcity, 9)[count], get_data(shipstate, 10)[count], get_data(shipzip, 11)[count], count), html)
+  body = MIMEText(build_email(get_data(onum, 0)[count], get_data(orderdate, 4)[count], get_data(shipname, 5)[count], get_data(shipaddr1, 6)[count], get_data(shipaddr2, 7)[count], get_data(shipaddr3, 8)[count], get_data(shipcity, 9)[count], get_data(shipstate, 10)[count], get_data(shipzip, 11)[count], count), 'html')
   msg.attach(body)
   
   try:
